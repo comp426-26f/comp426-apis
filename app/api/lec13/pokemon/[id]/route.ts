@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
 export async function GET(req: NextRequest, {params}: {params: Promise<{id: string}>}) {
     const {id} = await params;
